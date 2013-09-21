@@ -1,0 +1,14 @@
+-> Intro VCS
+-> CVCS
+-> DVCS
+-> Intro to Git
+-> Working of Git(Snapshots,Local operations,integrity) and the Three stages
+-> Create a repo
+-> Cloning
+-> track,stage,commit (add,commit,status,diff,log)
+*-> Usage of GUI
+*-> Unstaging,Unmodify
+*-> Remote 
+*-> Fetching,merging,pulling
+-> Push
+!-> Branch
