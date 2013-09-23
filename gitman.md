@@ -60,13 +60,16 @@ diff - To print details regarding files which have been modified after the last 
 	Examples:
 	
 	git diff
-		Show the changes made in the tracked (but unstaged) files after the last successful commit
+		Show the changes between the current working directory and staged files
 		
 	git diff --cached
-		Show the changes made in the staged files that will be recorded in the next commit
+		Show the changes between the staged files and the previous commit
 		
 	git diff --staged
 		(Same as the above, can be used in git version 1.6.1 or higher)
+		
+	git diff HEAD
+		Show the changes between the current working directory and the previous commit
 
 rm - To remove a tracked file
 	
