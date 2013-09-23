@@ -128,3 +128,10 @@ remote rm - To remove a remote
 	git remote rm mynewremote
 		Remove the remote "mynewremote"
 
+remote set-url - To change the url of a remote
+
+	Example:
+
+	git remote set-url origin https://github.com/fosscell/bashworkshop.git
+		To change the current url of the remote "origin" to the new url "https://github.com/fosscell/bashworkshop.git"
+
