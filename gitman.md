@@ -1,3 +1,22 @@
+Git Configuration 
+-----------------
+
+config - command used to configure git and view configurations
+
+	Example:
+
+	git config --global user.name "Sam"
+		Configures the user name as "Sam" in ~/.gitconfig
+		
+	git config --global user.email "samwaterston@gmail.com"
+		Configures the user's email as "Sam" in ~/.gitconfig
+		
+	git config user.name "Tony"
+		Configures the user name as "Tony" in .git/config for that directory
+		
+	git config --list
+		List all the currently configured values.
+
 Basic repo handling
 -------------------
 
@@ -24,6 +43,9 @@ commit - To commit the changes made in the repository's directory
 
 	git commit -m "sample_commit"
 		Commit the changes made in the staged file(s) with the message "sample_commit"
+		
+	git commit -a -m "sample commit"
+		Commit changes made in all the files currently being tracked
 
 status - To print details regarding the changes made in the repository's directory
 
@@ -38,9 +60,11 @@ diff - To print details regarding files which have been modified after the last 
 	Examples:
 	
 	git diff
-		Show the changes made in the tracked (but unstaged) files after the last succeful commit
+		Show the changes made in the tracked (but unstaged) files after the last successful commit
+		
 	git diff --cached
-		Show the changes made in the staged files that will be recorded in the next commit 
+		Show the changes made in the staged files that will be recorded in the next commit
+		
 	git diff --staged
 		(Same as the above, can be used in git version 1.6.1 or higher)
 
@@ -50,15 +74,16 @@ rm - To remove a tracked file
 	
 	git rm myfile
 		Stop tracking "myfile", remove it from the repository's directory and stage "myfile" removal
+		
 	git rm --cached myfile
 		Stop tracking "myfile" and stage "myfile" removal from the repository
 	
-mv - To move a file
+mv - Rename a file
 
 	Example:
 	
 	git mv myfile1 myfile2
-		Move "myfile1" to "myfile2", remove "myfile1" from repository's directory and start tracking "myfile2"
+		Stage the renaming of myfile1 to myfile2
 
 log - To print commit history in reverse chronological order
 
@@ -81,12 +106,12 @@ checkout - To unmodify a modified file
 	Example:
 	
 	git checkout -- myfile
-		To revert the changes made and restore "myfile" to the last succesful commit
+		To revert the changes made and restore "myfile" to the last successful commit
 
 Remote Handling
 ---------------
 
-remote add - To add a remote 
+remote add - To add a remote
 
 	Example:
 
@@ -134,4 +159,4 @@ remote set-url - To change the url of a remote
 
 	git remote set-url origin https://github.com/fosscell/bashworkshop.git
 		To change the current url of the remote "origin" to the new url "https://github.com/fosscell/bashworkshop.git"
-
+	
