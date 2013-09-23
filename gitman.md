@@ -160,3 +160,51 @@ remote set-url - To change the url of a remote
 	git remote set-url origin https://github.com/fosscell/bashworkshop.git
 		To change the current url of the remote "origin" to the new url "https://github.com/fosscell/bashworkshop.git"
 	
+Branching
+---------
+
+branch - To create/delete a new branch
+
+	Example:
+	
+	git branch mybranch
+		Create a new branch called "mybranch"
+		
+	git branch -d mybranch
+		Delete the branch "mybranch" 
+		
+checkout - Switch to a different branch
+
+	Example:
+	
+	git checkout mybranch
+		Switch to the branch "mybranch"
+		
+	git checkout -b newbranch
+		Create a branch called newbranch and switch to it
+		
+fetch - To fetch the changes from a remote repository
+
+	git fetch origin
+		Fetch the changes from the remote "origin"
+		
+merge - Merge two branches
+
+	git merge mybranch
+		Merge the changes from mybranch with the currently checked out branch
+
+push - push the changes in your local repo to a remote repo
+
+	git push origin
+		Push the changes in all local branches to the remote "origin"
+		
+	git push origin master
+		Push only the changes in the master branch to the remote "origin"
+		
+pull - fetch the changes from a remote repository and merge it with the local branches
+
+	git pull origin mybranch
+		Merge into the current branch the remote branch "mybranch"
+		
+	git pull origin
+		Merge the currently checked out local branch with the branch pointed to be HEAD in the remote repository
