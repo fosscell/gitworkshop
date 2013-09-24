@@ -8,8 +8,8 @@ config - command used to configure git and view configurations
 	git config --global user.name "Sam"
 		Configures the user name as "Sam" in ~/.gitconfig
 		
-	git config --global user.email "samwaterston@gmail.com"
-		Configures the user's email as "Sam" in ~/.gitconfig
+	git config --global user.email "sam@gmail.com"
+		Configures the user's email as "Sam@gmail.com" in ~/.gitconfig
 		
 	git config user.name "Tony"
 		Configures the user name as "Tony" in .git/config for that directory
