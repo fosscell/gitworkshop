@@ -1,9 +1,12 @@
+Basic Git commands manual
+=========================
+
 Git Configuration 
 -----------------
 
 config - command used to configure git and view configurations
 
-	Example:
+	Examples:
 
 	git config --global user.name "Sam"
 		Configures the user name as "Sam" in ~/.gitconfig
@@ -12,13 +15,16 @@ config - command used to configure git and view configurations
 		Configures the user's email as "Sam@gmail.com" in ~/.gitconfig
 		
 	git config user.name "Tony"
-		Configures the user name as "Tony" in .git/config for that directory
+		Configures the user name as "Tony" in .git/config (i.e. in the current repository)
 		
 	git config --list
-		List all the currently configured values.
+		List all the currently configured values belonging to the current repository
+	
+	git config --global --list
+		List all the currently configured values in ~/.gitconfig
 
-Basic repo handling
--------------------
+Repo handling
+-------------
 
 init - To initialise a git repository in an existing folder
 
@@ -39,7 +45,7 @@ add - To start tracking a file and/or to stage a file
 
 commit - To commit the changes made in the repository's directory
 
-	Example:
+	Examples:
 
 	git commit -m "sample_commit"
 		Commit the changes made in the staged file(s) with the message "sample_commit"
@@ -60,7 +66,7 @@ diff - To print details regarding files which have been modified after the last 
 	Examples:
 	
 	git diff
-		Show the changes between the current working directory and staged files
+		Show the changes between the current working directory and staged files (i.e. changes made which have not been staged yet)
 		
 	git diff --cached
 		Show the changes between the staged files and the previous commit
@@ -86,7 +92,7 @@ mv - Rename a file
 	Example:
 	
 	git mv myfile1 myfile2
-		Stage the renaming of myfile1 to myfile2
+		Stage the renaming of "myfile1" to "myfile2"
 
 log - To print commit history in reverse chronological order
 
@@ -104,7 +110,7 @@ reset - To unstage a staged file
 	git reset HEAD myfile
 		Unstage the staged "myfile" file
 	
-checkout - To unmodify a modified file
+checkout - To unmodify a modified but unstaged file
 
 	Example:
 	
@@ -168,35 +174,41 @@ Branching
 
 branch - To create/delete a new branch
 
-	Example:
+	Examples:
 	
 	git branch mybranch
-		Create a new branch called "mybranch"
+		Create a new branch "mybranch"
 		
 	git branch -d mybranch
 		Delete the branch "mybranch" 
 		
 checkout - Switch to a different branch
 
-	Example:
+	Examples:
 	
 	git checkout mybranch
 		Switch to the branch "mybranch"
 		
 	git checkout -b newbranch
-		Create a branch called newbranch and switch to it
+		Create a branch "newbranch" and switch to it
 		
 fetch - To fetch the changes from a remote repository
 
+	Example:
+	
 	git fetch origin
 		Fetch the changes from the remote "origin"
 		
 merge - Merge two branches
 
+	Example:
+
 	git merge mybranch
-		Merge the changes from mybranch with the currently checked out branch
+		Merge the changes from "mybranch" with the current branch
 
 push - push the changes in your local repo to a remote repo
+
+	Examples:
 
 	git push origin
 		Push the changes in all local branches to the remote "origin"
@@ -206,8 +218,18 @@ push - push the changes in your local repo to a remote repo
 		
 pull - fetch the changes from a remote repository and merge it with the local branches
 
+	Examples:
+
 	git pull origin mybranch
-		Merge into the current branch the remote branch "mybranch"
+		Merge the remote branch "mybranch" into the current branch 
 		
 	git pull origin
-		Merge the currently checked out local branch with the branch pointed to be HEAD in the remote repository
+		Merge the current local branch with the branch pointed to be HEAD in the remote repository
+
+	
+
+NOTE 
+----
+	Current branch refers to the branch the user is currently working in, i.e. currently checked out branch
+
+	Current repository refers to the repository in the currently working directory
