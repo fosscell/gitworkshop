@@ -42,6 +42,8 @@ add - To start tracking a file and/or to stage a file
 		Start tracking "myfile" (if not tracked) and stage "myfile"
 	git add .
 		Track/Stage all the untracked/unstaged files in the current directory
+	git add myfolder
+		Recursively Track/Stage all the untracked/unstaged files under the directory "myfolder"
 
 commit - To commit the changes made in the repository's directory
 
