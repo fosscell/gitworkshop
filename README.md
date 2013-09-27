@@ -7,7 +7,7 @@ This repo contains all the keynotes used in the Git workshop
 
 [Git Man Page](gitman.md)
 
-[Topics covered](topics)
+[Topics covered](topics.md)
 
 [Intro to Git PPT](git.odp)
 
