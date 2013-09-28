@@ -17,8 +17,6 @@ TOPICS
 
 -> Track,stage,commit (add,commit,status,diff,log)
 
--> Usage of a GUI tool
-
 -> Unstaging and Unmodifying files
 
 -> Remotes 
