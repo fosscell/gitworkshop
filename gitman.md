@@ -117,7 +117,15 @@ checkout - To unmodify a modified but unstaged file
 	Example:
 	
 	git checkout -- myfile
-		To revert the changes made and restore "myfile" to the last successful commit
+		Revert the changes made and restore "myfile" to the last successful commit
+		
+revert - To revert from a current succesful commit to the previous commit
+
+	Example:
+	
+	git revert HEAD
+		Revert all the files in the repository to a state correspoding to the previous succesful commit
+		
 
 Remote Handling
 ---------------
