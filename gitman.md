@@ -23,6 +23,12 @@ config - command used to configure git and view configurations
 	git config --global --list
 		List all the currently configured values in ~/.gitconfig
 
+	git config --global credential.helper cache
+		Saves credentials (password) in memory for 15 minutes (enabled by default)
+
+	git config --global credential.helper 'cache --timeout=1000'
+		Saves  credentials (password) in memory for 1000 (variable) seconds 
+
 Repo handling
 -------------
 
